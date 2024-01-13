@@ -41,6 +41,7 @@ return {
 
         -- Only attach to clients that support document formatting
         if not client.server_capabilities.documentFormattingProvider then
+          print("Sorry but the LSP " .. client.name .. " doesn't support document formatting")
           return
         end
 
